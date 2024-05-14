@@ -5,14 +5,14 @@ interface SStorage<T> {
 
 class LocalStorage<T> {
   private storage: SStorage<T> = {}
-  set(key:string, value:T){
+  setItem(key:string, value:T){
     this.storage[key] = value;
   }
-  remove(key:string){
-    delete this.storage[key]
-  }
-  get(key:string):T{
+  getItem(key:string):T{
     return this.storage[key]
+  }
+  clearItem(key:string){
+    delete this.storage[key]
   }
   clear(){
     this.storage = {}
@@ -21,12 +21,12 @@ class LocalStorage<T> {
 }
 
 const stringsStorage = new LocalStorage<string>()
-console.log(stringsStorage.get('name'))//undefined
-console.log(stringsStorage.set('name', 'John'))//undefined
-console.log(stringsStorage.get('name'))//John
+console.log(stringsStorage.getItem('name'))//undefined
+console.log(stringsStorage.setItem('name', 'John'))//undefined
+console.log(stringsStorage.getItem('name'))//John
 
 const booleansStorage = new LocalStorage<boolean>();
-console.log(booleansStorage.get('isLoggedIn'))//undefined
-console.log(booleansStorage.set('isLoggedIn', true))//undefined
-console.log(booleansStorage.get('isLoggedIn'))//true
+console.log(booleansStorage.getItem('isLoggedIn'))//undefined
+console.log(booleansStorage.setItem('isLoggedIn', true))//undefined
+console.log(booleansStorage.getItem('isLoggedIn'))//true
 
