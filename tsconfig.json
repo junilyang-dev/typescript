@@ -2,6 +2,6 @@
   "include" : ["src"],
   "compilerOptions" : {
     "outDir" : "build",
-    "target" : "es6",
+    "target" : "ES3",
   }
 }
