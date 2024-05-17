@@ -5,14 +5,15 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node src/index",
+    "dev": "nodemon --exec ts-node src/index.ts",
     "start": "node build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^3.3.1"
+    "node-fetch": "^3.3.1",
+    "nodemon": "^3.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
