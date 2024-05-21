@@ -46,4 +46,6 @@ blockchain.addBlock("First one");
 blockchain.addBlock("Second one");
 blockchain.addBlock("Third one");
 
+blockchain.getBlocks().push(new Block('xxx',111,'HACKED'));
+
 console.log(blockchain.getBlocks());
